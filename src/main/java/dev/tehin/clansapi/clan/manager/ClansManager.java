@@ -8,6 +8,10 @@ public class ClansManager {
 	
 	private ConcurrentHashMap<String, Clan> clans = new ConcurrentHashMap<>();
 	 
+	public void loadClans() {
+		//TODO
+	}
+	
 	public void createClan(Clan clan) {
 		clans.put(clan.getName(), clan);
 	}
@@ -19,6 +23,7 @@ public class ClansManager {
 	public boolean clanExists(String name) {
 		return (getClanByName(name) != null);
 	}
+	
 	
 
 }

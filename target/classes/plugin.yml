@@ -1,8 +1,0 @@
-name: ClansAPI
-version: 0.1
-main: dev.tehin.clansapi.Clans
-author: Tehin
-description: An Open Source practice plugin.
-commands:
-  debug:
-    usage: ""

@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import org.bukkit.entity.Player;
 
+import dev.tehin.clansapi.Clans;
 import dev.tehin.clansapi.clan.Clan;
 import dev.tehin.clansapi.clan.roles.ClanRole;
 
@@ -15,8 +16,12 @@ public class PlayerData {
 	
 	public PlayerData(Player player) {
 		this.player = player;
-		this.clan = ""; // TOOD
-		this.role = clan.getRole(getUUID());
+		this.clan = Clans.getInstance().getPlayerManager().loadClanFromDatabase(player);
+		this.role = clan.getRole(player.getUniqueId());
+	}
+	
+	public boolean hasClan() {
+		return clan != null;
 	}
 
 	public Clan getClan() {

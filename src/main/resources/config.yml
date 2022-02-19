@@ -1,2 +1,5 @@
+database:
+  connection-uri: ""
+
 max-members: 15
 default-coins: 0
