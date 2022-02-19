@@ -25,3 +25,8 @@ local.properties
 
 # Locally stored "Eclipse launch configurations"
 *.launch
+
+# Maven folder
+/target
+/bin
+/.settings
